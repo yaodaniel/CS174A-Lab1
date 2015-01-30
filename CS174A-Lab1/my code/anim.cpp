@@ -275,9 +275,7 @@ This function draws a pair of legs (4 pieces) for the bee's left and right sides
 void drawLegs(char position){
 	transformationStack.push(model_view); //Save caller's model
 	set_colour(0.4f,0.4f,0.4f);
-	float rotateAmt = 30*sin(1.1*TIME), tmp;
-	if(rotateAmt < 0)
-		rotateAmt = 0;
+	float rotateAmt = 15*(sin(1.1*TIME)+1), tmp;
 	switch(position) {
 	case 'f':
 		tmp = -0.25;
